@@ -4,7 +4,6 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
     <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
-        <link rel="stylesheet" href="https://fullcalendar.io/js/fullcalendar-3.0.1/fullcalendar.min.css"/>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script type="text/javascript">
@@ -30,6 +29,13 @@
     <link href ="{{ asset('/css/star.css') }}" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/rate.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.css
+">
+
+
+
+
 
 
 

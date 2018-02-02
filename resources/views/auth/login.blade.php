@@ -48,7 +48,6 @@
         </div>
     </form>
 
-    @include('auth.partials.social_login')
 
     <a href="{{ url('/password/reset') }}">Zaboravio/la sam lozinku</a><br>
     <a href="{{ url('/register') }}" class="text-center">Registruj novi nalog</a>

@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 Route::group(['middleware' => 'App\Http\Middleware\MechanicMiddleware'], function () {
     Route::get('/loginMehanicar', function () {

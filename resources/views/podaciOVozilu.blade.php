@@ -15,12 +15,30 @@
                     <div class="panel-body">
                         <div class="form-group">
                         <table class="table table-stripped">
+                          <thead>
+                            <tr>
+                              <th>Proizvođač</th>
+                              <th>Model</th>
+                              <th>Datum servisa</th>
+                              <th>Dijagnoza kvara</th>
+                              <th>Odrađeni servis</th>
+                              <th>Kilometraža</th>
+                              <th>Auto servis</th>
+                            </tr>
+                          </thead>
+                          <tbody>
                         @foreach($podaciOVozilu as $p)
                             <tr>
-                                <td>Dijagnoza kvara</td>
+                                <td>{{$p->proizvodjac}}</td>
+                                <td>{{$p->model}}</td>
+                                <td>{{$p->datumServisa}}</td>
                                 <td>{{$p->dijagnozaKvara}}</td>
+                                <td>{{$p->servis}}</td>
+                                <td>{{$p->kilometraza}}</td>
+                                <td>{{$p->nazivFirme}}</td>
                             </tr>
                             @endforeach
+                          </tbody>
                         </table>
 
                         </div>

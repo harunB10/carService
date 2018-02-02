@@ -52,11 +52,14 @@ class MehanicarController extends Controller
 
     public function pregledServisa($id)
     {
+
         $idVozila = DB::table('user_cars')->select('id')
             ->where('user_cars.brojMotora', '=', $id)
             ->first();
 
         $podaciOVozilu = DB::table('services')
+            ->join('user_cars', 'services.idUserCars', '=', 'user_cars.id')
+            ->join('mechanics', 'services.idMehanicar', '=', 'mechanics.id')
             ->where('idUserCars', '=', $idVozila->id)
             ->get();
 

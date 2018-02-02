@@ -37,7 +37,7 @@
         </div>
       {{Form::close()}}</li>
       <li>
-          <a href="home">
+          <a href="/home">
             <i class="fa fa-calendar"></i> <span>Kalendar</span>
           </a>
         </li>

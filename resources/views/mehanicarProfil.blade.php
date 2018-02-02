@@ -29,19 +29,20 @@
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,agendaWeek,agendaDay,listWeek'
+            right: 'listDay,listWeek,month'
         },
-        monthNames: ['Januar','Februar','Mart','April','Maj','Juni','Juli','August','Septembar','Oktobar','Novembar','Decembar'],
-        monthNamesShort: ['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt','Nov','Dec'],
+       listDay: { buttonText: 'list day' },
+        listWeek: { buttonText: 'list week' },
         editable: true,
         eventLimit: true, // allow "more" link when too many events
         navLinks: true,
+        defaultView: 'listWeek',
         events: [
             @foreach ($zaKalendar as $z)
                
            
             {
-                title: '{{$z->name}}',
+                title: 'Klijent: {{$z->name}}, Vozilo: - {{$z->proizvodjac}} / {{$z->model}} / Broj motora: {{$z->brojMotora}} / {{$z->snaga}}kw / Broj vrata: {{$z->brojVrata}} / Kubikaža: {{$z->kubikaza}}',
                 start: '{{$z->startTime}}T{{$z->end}}',
                 @if ($z->vrstaServisa === "Veliki servis")
                     color: 'red'

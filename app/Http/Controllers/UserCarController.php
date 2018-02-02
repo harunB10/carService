@@ -46,7 +46,8 @@ class UserCarController extends Controller
         if (1 == $korisnik->isMechanic) {
             $zaKalendar = Termin::join('mechanics', 'termin.idMehanicar', '=', 'mechanics.id')
                 ->join('users', 'termin.idKorisnik', '=', 'users.id')
-                ->where('mechanics.nazivFirme', '=', Auth::user()->name)->select('termin.*', 'users.name')->get();
+                ->join('user_cars', 'users.id', '=', 'user_cars.idUsers')
+                ->where('mechanics.nazivFirme', '=', Auth::user()->name)->select('termin.*', 'users.name', 'user_cars.*')->get();
         }
 
         return view('home', compact('auta', 'servisi', 'brojServisa', 'brojAuta', 'korisnik', 'vozila', 'zaKalendar', 'notifikacijeTermin', 'notifikacijeTerminBrojac'));
